@@ -7,66 +7,88 @@
   <title>タンク図鑑</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: #f5f7fa;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+                   "Yu Gothic", sans-serif;
+      background: #f4f8fb;
       color: #333;
     }
 
     header {
       text-align: center;
-      padding: 30px 15px;
-      background: #ffffff;
+      padding: 35px 15px;
+      background: white;
+      border-bottom: 1px solid #e8edf1;
     }
 
-    h1 {
+    header h1 {
       margin: 0;
       font-size: 32px;
     }
 
     .subtitle {
       margin-top: 8px;
-      color: #888;
+      color: #8a949c;
+      font-size: 14px;
     }
 
     .tank-card {
-      max-width: 500px;
+      width: calc(100% - 30px);
+      max-width: 520px;
       margin: 30px auto;
       padding: 25px;
       background: white;
       border-radius: 25px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     }
 
+    /* ノーマルの画像 */
     .tank-image {
-      width: 150px;
-      height: 150px;
+      width: 100%;
+      max-width: 320px;
+      height: 230px;
+      object-fit: contain;
+      display: block;
       margin: 0 auto 25px;
-      background: #e53935;
-      border-radius: 50%;
+      border-radius: 20px;
     }
 
     .name {
       text-align: center;
       font-size: 30px;
-      margin-bottom: 25px;
+      margin: 0 0 25px;
     }
 
     .info {
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
+      padding: 15px 5px;
+      border-bottom: 1px solid #eeeeee;
       font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .info:last-child {
+      border-bottom: none;
     }
 
     .label {
       font-weight: bold;
+      margin-right: 5px;
+    }
+
+    .stars {
+      letter-spacing: 2px;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px 15px;
       color: #999;
+      font-size: 13px;
     }
   </style>
 </head>
@@ -80,7 +102,11 @@
 
   <main class="tank-card">
 
-    <div class="tank-image"></div>
+    <img
+      class="tank-image"
+      src="IMG_3263.jpeg"
+      alt="ノーマル"
+    >
 
     <h2 class="name">ノーマル</h2>
 
@@ -91,7 +117,7 @@
 
     <div class="info">
       <span class="label">レア度：</span>
-      ⭐️1
+      <span class="stars">⭐️1</span>
     </div>
 
     <div class="info">
@@ -101,12 +127,12 @@
 
     <div class="info">
       <span class="label">使いやすさ：</span>
-      ⭐️5
+      <span class="stars">⭐️5</span>
     </div>
 
     <div class="info">
       <span class="label">強さ：</span>
-      ⭐️1
+      <span class="stars">⭐️1</span>
     </div>
 
   </main>
